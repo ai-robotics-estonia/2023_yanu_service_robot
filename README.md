@@ -1,49 +1,54 @@
-*This is a template repository for this organization. Start by replacing the placeholder for the project name with it's actual title.*
-
-# [Demonstration Project title]
+# Yanu Digital Twin with Isaac Sim
 
 ## Summary
 
-| Company name | [Company](https://website.link) |
+| Company | [Yanu](https://yanu.ai/) |
 | :--- | :--- |
-| Development Team Lead Name | [First name, Surname](https://profile.link) |
-| Development Team Lead e-mail | [Team Member 1](https://profile.link) |
-| Objectives of the Demonstration Project |  |
-
-# Each project has an alternative:
-
-- *a) To fill in the description [below](https://github.com/ai-robotics-estonia/_project_template_/edit/main/README.md#implementation-details)*
-*OR*
-- *c) a custom agreement with the AIRE team*
+| Project Manager | [Project Manager TODO](https://profile.link) |
+| Profject Team | [Kristjan Laht](https://github.com/KingBoomie); [Houman Masnavi](https://www.linkedin.com/in/houman-masnavi/?originalSubdomain=ee) |
+| Challenge Tackled | 3d model optimization;  |
+| Technology Used | nvidia isaac robot simulator; ROS;  |
 
 ## Objectives of the Demonstration Project
-*Please provide your objectives here.*
+The objective of this project was to develop an N-dimensional digital twin for YANU robotic cells. The digital twin is expected to provide validation of new algorithms in a safe way, thus reducing potential system downtime, and model-based testing of full systems integrations and its upgrades before deployment on the live system.
 
 ## Activities and results of demonstration project
-*Challenge addressed (i.e. whether and how the initial challenge was changed during the project, for which investment the demonstration project was provided)*
--  *a)*
+### Challenge addressed (i.e. whether and how the initial challenge was changed during the project, for which investment the demonstration project was provided)*
+- Creating a simulation environment based in Isaac Sim for the Yanu robot. Modifying the models to function in real time. 
 
-*Data sources (which data was used for the technological solution)*
--  *a)*
+### Data sources (which data was used for the technological solution)
+- Openly available physical models of the Panda robot arm and proprietary model of the Yanu workspace / robot.  
 
-*Description and justifictaion of used AI technology*
--  *a)*
+### Description and justifictaion of used AI technology
+- Path planning, collision algorithms and physical simulations were used to test the robot in a simulated environment. 
 
-*Results of testing and validating technological solution*
--  *a)*
+### Results of testing and validating technological solution
+- The Yanu robot can perform drink creation __sometimes__. The simulated robot performs similarly to the real robot even in erronous cases (displays shakyness and vibrations). It is highly likely that creating a perfectly working control algorithm (without said shakyness and vibrations) using the simulated robot would also mean that the algorithm would work in real life.  
 
-*Technical architecture (presented graphically, where can also be seen how the technical solution integrates with the existing system)*
--  *a)*
+### Technical architecture (presented graphically, where can also be seen how the technical solution integrates with the existing system)*
 
-*Potential areas of use of technical solution*
--  *a)*
 
-*Lessons learned (i.e. assessment whether the technological solution actually solved the initial challenge)*
--  *a)*
+- The technical architecture involves a photorealistic physics-based simulation environment (NVIDIA Omniverse Isaac Sim) that integrates with the main software backbone (ROS). 
+![Graphical architecture overview](yanu-aire-service-sim.drawio.svg)
+
+
+
+### Potential areas of use of technical solution
+- Example solution for other similar robotic environments. Can use the tricks we figured out to work around bugs in ROS and Isaac Sim.
+
+### Lessons learned (i.e. assessment whether the technological solution actually solved the initial challenge)
+- Simulation and reality might be very different and not overlap at all. For example in real life bigger things cannot fall through small holes. Due to imperfect collision algorithms, this is very possible in simulation. From the tested 5 collision algorithms, only 2 were barely working, and due to bugs in Isaac sim, only one could actually be used. Since our robot needs to be holding things that fall into its hand, this is almost a show stopper problem. 
+![Image from nvidia presentationt](nvidia-presenation-1.png)
+
+- Isaac sim is still a little new and buggy. There were 5+ bugs that needed workarounds (or in one case, actual fixes sent to Nvidia). 
+
+- The created simulation is an okay place to train new robot movement algorithms without breaking a physical robot with impossible movements, but due to manufacturing differences and imperfect collision algorithms, real world testing is indispencable.
+
 
 ### Description of User Interface 
-*(i.e. How does the client 'see' the technical result, whether a separate user interface was developed, command line script was developed, was it validated as an experiment, can the results be seen in ERP or are they integrated into work process)*
--  *a)*
+- The simulation UI was not developed for client use, but the default that comes with Isaac Sim looks like the following: 
+
+[robot completing a recipe with some other random glasses standing around](isaac-robot-cup-success.mkv)
 
 
 ## Custom agreement with the AIRE team
