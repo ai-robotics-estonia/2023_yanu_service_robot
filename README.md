@@ -4,8 +4,8 @@
 
 | Company | [Yanu](https://yanu.ai/) |
 | :--- | :--- |
-| Project Manager | [Project Manager TODO](https://profile.link) |
-| Profject Team | [Kristjan Laht](https://github.com/KingBoomie); [Houman Masnavi](https://www.linkedin.com/in/houman-masnavi/?originalSubdomain=ee) |
+| Project Manager | Alvo Aablo; Karl Kruusamäe |
+| Profject Team | [Kristjan Laht](https://github.com/KingBoomie); [Houman Masnavi](https://www.linkedin.com/in/houman-masnavi/?originalSubdomain=ee); Alvo Aablo; Karl Kruusamäe |
 | Challenge Tackled | 3d model optimization;  |
 | Technology Used | nvidia isaac robot simulator; ROS;  |
 
