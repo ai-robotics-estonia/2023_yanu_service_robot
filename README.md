@@ -28,7 +28,7 @@ The objective of this project was to develop an N-dimensional digital twin for Y
 ### Technical architecture (presented graphically, where can also be seen how the technical solution integrates with the existing system)*
 
 
-- The technical architecture involves a photorealistic physics-based simulation environment (NVIDIA Omniverse Isaac Sim) that integrates with the main software backbone (ROS). 
+- The technical architecture involves a photorealistic physics-based simulation environment (NVIDIA Omniverse Isaac Sim) that integrates with the main software backbone (ROS). The green block sets up the integration and handles all the custom orchestration between the simulation and ROS.
 ![Graphical architecture overview](yanu-aire-service-sim.drawio.svg)
 
 
