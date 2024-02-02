@@ -1,4 +1,4 @@
-# Yanu Digital Twin with Isaac Sim
+# Testing AI algorithms with Yanu service robot
 
 ## Summary
 
